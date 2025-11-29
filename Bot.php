@@ -50,11 +50,11 @@ $answers = [
 ];
 
 // Lee mensaje del usuario
-$input = json_decode(file_get_contents('php://input'), true);
-$msg   = strtolower(trim($input['query']['message'] ?? ''));
-$sender= $input['query']['sender'] ?? '';
+// WhatsApp Auto envía form-data, no JSON
+$msg    = strtolower(trim($_POST['message'] ?? ''));
+$sender = $_POST['sender'] ?? '';
+$reply  = "No capté eso. ¿Podrías escribir *menú* para que te ayude?";
 
-$reply = "No capté eso. ¿Podrías escribir *menú* para que te ayude?";
 
 foreach ($answers as $a) {
   if (in_array($msg, array_map('strtolower', $a['keys']))) {
