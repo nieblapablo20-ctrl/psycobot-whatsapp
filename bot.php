@@ -63,6 +63,8 @@ foreach ($answers as $a) {
   }
 }
 
-// Respuesta en formato que WhatsApp Auto espera
+// AutoResponder FREE espera JSON puro
 header('Content-Type: application/json');
 echo json_encode(['reply' => $reply], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+exit;
+JSON_UNESCAPED_UNICODE);
