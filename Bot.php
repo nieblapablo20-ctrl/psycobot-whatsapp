@@ -66,5 +66,3 @@ foreach ($answers as $a) {
 // Respuesta en formato que WhatsApp Auto espera
 header('Content-Type: application/json');
 echo json_encode(['reply' => $reply], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-
-
