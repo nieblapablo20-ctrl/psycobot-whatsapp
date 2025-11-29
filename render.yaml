@@ -3,3 +3,4 @@ services:
     name: psicobot
     env: docker
     dockerfilePath: ./Dockerfile
+    plan: free
