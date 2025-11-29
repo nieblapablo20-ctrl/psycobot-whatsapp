@@ -63,6 +63,7 @@ foreach ($answers as $a) {
   }
 }
 
-// Respuesta JSON que espera WhatsApp Auto
-echo json_encode(['replies' => [['message' => $reply]]]);
-?>
+// Respuesta en formato que WhatsApp Auto espera
+http_response_code(200);
+echo json_encode(['reply' => $reply]);
+
